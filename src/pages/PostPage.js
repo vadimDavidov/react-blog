@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import DataContext from './context/useDataContext';
+import DataContext from '../context/useDataContext';
 import { useParams, Link } from 'react-router-dom';
 
 function PostPage() {

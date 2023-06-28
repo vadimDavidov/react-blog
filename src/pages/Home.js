@@ -1,11 +1,9 @@
 import { useContext } from 'react';
-import DataContext from './context/useDataContext';
-import Feed from './components/Feed';
-import useAxiosFetch from './hooks/useAxiosFetch';
+import DataContext from '../context/useDataContext';
+import Feed from '../components/Feed';
 
 function Home() {
-  const { searchResults } = useContext(DataContext);
-  const { fetchError, isLoading } = useAxiosFetch();
+  const { searchResults, fetchError, isLoading } = useContext(DataContext);
 
   return (
     <main className="Home">

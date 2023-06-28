@@ -9,7 +9,7 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
   const navigate = useNavigate();
   const datetime = format(new Date(), 'MMMM dd, yyyy pp');
-  const { data } = useAxiosFetch();
+  const { data } = useAxiosFetch('http://localhost:3500/posts');
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);

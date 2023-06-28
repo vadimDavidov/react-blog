@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useContext } from 'react';
-import DataContext from './context/useDataContext';
+import DataContext from '../context/useDataContext';
 import { useParams } from 'react-router-dom';
 
 function EditPost() {
@@ -9,8 +9,6 @@ function EditPost() {
   const [editTitle, setEditTitle] = useState('');
   const [editBody, setEditBody] = useState('');
   const post = posts.find(post => post.id.toString() === id);
-
-  console.log(post.id);
 
   useEffect(() => {
     setEditTitle(post.title);

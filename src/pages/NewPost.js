@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useContext } from 'react';
-import DataContext from './context/useDataContext';
+import DataContext from '../context/useDataContext';
 
 function NewPost() {
   const { navigate, datetime, api, posts, setPosts } = useContext(DataContext);
