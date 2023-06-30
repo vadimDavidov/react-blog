@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import DataContext from '../context/useDataContext';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const { posts } = useContext(DataContext);
@@ -7,8 +8,12 @@ function Footer() {
   const postCount = posts.length;
   return (
     <footer className="Footer">
-      <p>{postCount} Blog Posts</p>
-      <span>🗒</span>
+      <p>
+        <Link to={'/'}>{postCount} Blog Posts</Link>
+      </p>
+      <span>
+        <Link to={'/post'}>🗒</Link>
+      </span>
       <p>Copyright &copy; {today.getFullYear()}</p>
     </footer>
   );
